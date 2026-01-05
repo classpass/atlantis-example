@@ -13,7 +13,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "example" {
   provider      = aws.user
-  bucket        = "classpass-atlantis-poc-2548675677"
+  bucket        = "classpass-atlantis-poc-6831407"
   force_destroy = "false"           # Will prevent destruction of bucket with contents inside
 }
 
