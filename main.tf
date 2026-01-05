@@ -17,11 +17,6 @@ resource "aws_s3_bucket" "example" {
   force_destroy = "false"           # Will prevent destruction of bucket with contents inside
 }
 
-resource "aws_s3_bucket_acl" "example" {
-  bucket = aws_s3_bucket.example.id
-  acl    = "private"
-}
-
 resource "aws_s3_object" "objects" {
   for_each = fileset("myfiles/", "*")
   bucket   = aws_s3_bucket.example.bucket
