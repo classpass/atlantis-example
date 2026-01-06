@@ -7,7 +7,7 @@ terraform {
 
   backend "s3" {
     bucket       = "cp-terraform-resources"
-    key          = "POC/atlantis/prod/terraform.tfstate"
+    key          = "POC/atlantis//terraform.tfstate"
     region       = "us-east-1"
     use_lockfile = true
     encrypt      = true

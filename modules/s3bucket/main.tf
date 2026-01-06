@@ -11,3 +11,8 @@ resource "aws_s3_object" "objects" {
   source   = "myfiles/${each.value}"
   etag     = filemd5("myfiles/${each.value}")
 }
+
+provider "aws" {
+  alias   = "user"
+  region  = "us-east-1"
+}

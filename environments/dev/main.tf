@@ -19,7 +19,7 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-module "s3bucket" {
+ module "s3bucket" {
   source = "../../modules/s3bucket"
   environment_name = "development"
-}
+} 
