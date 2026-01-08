@@ -16,3 +16,10 @@ provider "aws" {
   alias   = "user"
   region  = "us-east-1"
 }
+
+resource "aws_ssm_parameter" "environment_name" {
+  name  = "/atlantis/poc/environment_name"
+  type  = "String"
+  value = var.environment_name
+  overwrite = true
+}
