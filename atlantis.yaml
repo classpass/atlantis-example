@@ -4,3 +4,10 @@ autodiscover:
   mode: auto
 parallel_plan: true
 parallel_apply: true
+projects:
+   - dir: environments/dev
+     autoplan:
+        when_modified: ["../../modules/**/*.tf", "*.tf*", ".terraform.lock.hcl"]
+   - dir: environments/prod
+     autoplan:
+        when_modified: ["../../modules/**/*.tf", "*.tf*", ".terraform.lock.hcl"]
