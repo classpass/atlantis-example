@@ -23,3 +23,10 @@ resource "aws_ssm_parameter" "environment_name" {
   value = var.environment_name
   overwrite = true
 }
+
+resource "aws_ssm_parameter" "enabled" {
+  name  = "/atlantis/${var.environment_name}/enabled"
+  type  = "String"
+  value = "true"
+  overwrite = true
+}
